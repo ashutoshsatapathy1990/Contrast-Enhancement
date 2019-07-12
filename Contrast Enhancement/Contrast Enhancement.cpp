@@ -41,9 +41,22 @@ void Log_Stretch(Mat* Image, int row, int col)
 {
 	for (int j = 0; j < row * col; j++)
 	{
-		Image[0].data[j] = 64 * log2(Image[0].at<uchar>(j / row, j%row) + 1);
-		Image[1].data[j] = 64 * log2(Image[1].at<uchar>(j / row, j%row) + 1);
-		Image[2].data[j] = 64 * log2(Image[2].at<uchar>(j / row, j%row) + 1);
+		Image[0].data[j] = 46 * log(Image[0].at<uchar>(j / row, j % row) + 1);
+		Image[1].data[j] = 46 * log(Image[1].at<uchar>(j / row, j % row) + 1);
+		Image[2].data[j] = 46 * log(Image[2].at<uchar>(j / row, j % row) + 1);
+	}
+}
+/*........................................... END .................................................*/
+
+/*.................................... EXPONETIAL STRETCHING ..........................................*/
+// Contrast enhancement of [R, G, B] channels individually using exponential stretching method. 
+void Exp_Stretch(Mat* Image, int row, int col)
+{
+	for (int j = 0; j < row * col; j++)
+	{
+		Image[0].data[j] = exp(0.02173 * (Image[0].at<uchar>(j / row, j % row))) - 1;
+		Image[1].data[j] = exp(0.02173 * (Image[1].at<uchar>(j / row, j % row))) - 1;
+		Image[2].data[j] = exp(0.02173 * (Image[2].at<uchar>(j / row, j % row))) - 1;
 	}
 }
 /*........................................... END .................................................*/
@@ -100,7 +113,7 @@ int main()
 		Log_Stretch(RGB_Image, Image.rows, Image.cols);
 		break;
 	case 4:	printf("You Selected Exponential Stretching \n");
-		//LP_Butterworth_Filter(LPFilter, CUTOFF, ord);
+		Exp_Stretch(RGB_Image, Image.rows, Image.cols);
 		break;
 	case 5:	printf("You Selected Power-Law Transformation \n");
 		//LP_Butterworth_Filter(LPFilter, CUTOFF, ord);
