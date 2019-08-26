@@ -1,9 +1,9 @@
 /* -------------------------------------------------------------------------------------------------|
 IMAGE CONTRAST ENHANCEMENT IN SPATIAL DOMAIN USING LINEAR, PIECEWISE LINEAR, EXP., LOG. STRETCHING. |
-IMAGE CONTRAST ENHANCEMENT IN SPATIAL DOMAIN USING POWER LAW TRANSFORMATION.						|
-IMAGE CONTRAST ENHANCEMENT IN SPATIAL DOMAIN USING HE, CONTRAST LIMITED HISTOGRAM EQUALIZATION.		|
-IMAGE CONTRAST ENHANCEMENT IN SPATIAL DOMAIN USING BBHE, DSIHE AND CLADHE TECHNIQUES.				|
-Contrast Enhancement.cpp : Defines the entry point for the console application.						|
+IMAGE CONTRAST ENHANCEMENT IN SPATIAL DOMAIN USING POWER LAW TRANSFORMATION.			    |
+IMAGE CONTRAST ENHANCEMENT IN SPATIAL DOMAIN USING HE, CONTRAST LIMITED HISTOGRAM EQUALIZATION.	    |
+IMAGE CONTRAST ENHANCEMENT IN SPATIAL DOMAIN USING BBHE, DSIHE AND CLADHE TECHNIQUES.		    |
+Contrast Enhancement.cpp : Defines the entry point for the console application.			    |
 ...................................................................................................*/
 
 /*...................................... HEADER FILES .............................................*/
